@@ -1,0 +1,28 @@
+.projects-section {
+  .project-card {
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+    will-change: transform;
+
+    img {
+      transition: transform 0.4s ease-in-out;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+      img {
+        transform: scale(1.03);
+      }
+    }
+  }
+  .project-card img {
+  transition: transform 0.4s ease-in-out;
+}
+.project-card:hover img {
+  transform: scale(1.03);
+}
+
+}

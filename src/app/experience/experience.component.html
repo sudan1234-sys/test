@@ -1,0 +1,20 @@
+<section class="experience-section bg-gradient-to-br from-white to-gray-100 dark:from-[#0f172a] dark:to-[#1e293b] py-16 px-6 md:px-12">
+  <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-12" data-aos="fade-up" data-aos-once="false">
+    Experience
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+    <div 
+      class="experience-card bg-white dark:bg-slate-800 p-6 rounded-xl shadow hover:scale-[1.03] transition-transform duration-300 ease-in-out"
+      *ngFor="let exp of experiences"
+      data-aos="fade-up"
+    data-aos-once="false"
+    >
+      <h3 class="text-xl font-semibold text-gray-900 dark:text-white">{{ exp.role }}</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300 italic mb-1">{{ exp.company }} &bull; {{ exp.duration }}</p>
+      <ul class="list-disc list-inside mt-2 text-sm text-gray-700 dark:text-gray-200 space-y-1">
+        <li *ngFor="let point of exp.responsibilities">{{ point }}</li>
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+<section class="relative min-h-[90vh] flex flex-col items-center justify-center text-center overflow-hidden px-4 md:px-12 bg-gradient-to-br from-indigo-600 via-purple-500 to-pink-400 text-white dark:from-gray-900 dark:via-gray-800 dark:to-black">
+
+  <!-- Subtle Animated Blobs -->
+  <div class="absolute top-[-100px] left-[-100px] w-[400px] h-[400px] bg-gradient-to-br from-pink-300 to-purple-400 rounded-full opacity-30 blur-3xl animate-pulse z-0"></div>
+  <div class="absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-gradient-to-br from-indigo-400 to-blue-300 rounded-full opacity-30 blur-3xl animate-pulse z-0"></div>
+
+  <!-- Main Content -->
+  <img src="assets/your-photo.jpg" alt="Your Photo"
+       class="z-10 w-32 h-32 rounded-full mb-6 shadow-lg border-4 border-white dark:border-indigo-400" />
+
+  <h1 class="z-10 text-4xl md:text-5xl font-extrabold">
+    Hi, I’m <span class="text-yellow-300 dark:text-indigo-400">Gbb</span><br>
+    A Passionate <span class="underline decoration-white">Data Analyst</span>
+  </h1>
+
+  <p class="z-10 mt-4 text-lg max-w-2xl text-white/90">
+    I turn data into actionable insights using Python, SQL, Power BI & Excel.
+  </p>
+
+  <div class="z-10 mt-6 flex flex-wrap justify-center gap-4">
+    <a href="/assets/resume.pdf"
+       class="px-6 py-3 bg-white text-indigo-700 rounded-lg hover:bg-gray-200 transition">
+      Download Resume
+    </a>
+    <a routerLink="/projects"
+       class="px-6 py-3 border border-white text-white rounded-lg hover:bg-white/10 transition">
+      View Projects
+    </a>
+  </div>
+</section>

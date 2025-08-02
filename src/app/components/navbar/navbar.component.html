@@ -1,0 +1,47 @@
+<nav class="w-full px-4 py-3 shadow-md bg-white dark:bg-gray-900 transition-colors duration-300">
+  <div class="mx-auto max-w-7xl flex items-center justify-between">
+    <!-- Logo -->
+    <a routerLink="/" class="text-xl font-bold text-indigo-600 dark:text-indigo-400">Gbb Analyst</a>
+
+    <!-- Nav Links (Desktop) -->
+    <div class="hidden md:flex space-x-6 text-gray-600 dark:text-gray-300 font-medium justify-center flex-1">
+      <a routerLink="/" routerLinkActive="text-indigo-600 dark:text-indigo-400" class="hover:text-indigo-600 dark:hover:text-indigo-400">Home</a>
+      <a routerLink="/about" routerLinkActive="text-indigo-600 dark:text-indigo-400" class="hover:text-indigo-600 dark:hover:text-indigo-400">About</a>
+      <a routerLink="/projects" routerLinkActive="text-indigo-600 dark:text-indigo-400" class="hover:text-indigo-600 dark:hover:text-indigo-400">Projects</a>
+      <a routerLink="/contact" routerLinkActive="text-indigo-600 dark:text-indigo-400" class="hover:text-indigo-600 dark:hover:text-indigo-400">Contact</a>
+    </div>
+
+    <!-- Theme Toggle (Bulb) -->
+    <button (click)="toggleDarkMode()" class="ml-4 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+      <!-- Light bulb icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-yellow-400 dark:stroke-gray-200" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 3a6 6 0 0 0-3 11.197V17a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-2.803A6 6 0 0 0 12 3z"/>
+      </svg>
+    </button>
+
+    <!-- Hamburger Toggle -->
+    <div class="md:hidden ml-3">
+      <button (click)="toggleMobileMenu()" class="text-gray-600 dark:text-gray-300 focus:outline-none">
+        <svg *ngIf="!mobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg *ngIf="mobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Nav Links -->
+  <div *ngIf="mobileMenuOpen" class="md:hidden mt-3 space-y-2 text-center text-gray-700 dark:text-gray-300">
+    <a routerLink="/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded">Home</a>
+    <a routerLink="/about" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded">About</a>
+    <a routerLink="/projects" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded">Projects</a>
+    <a routerLink="/contact" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded">Contact</a>
+  </div>
+</nav>

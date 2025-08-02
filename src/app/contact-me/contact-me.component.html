@@ -1,0 +1,56 @@
+<section class="contact-section bg-gradient-to-br from-white to-gray-100 dark:from-[#0f172a] dark:to-[#1e293b] py-16 px-6 md:px-12">
+  <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-12" data-aos="fade-up">
+    Contact Me
+  </h2>
+
+  <div class="max-w-2xl mx-auto bg-white dark:bg-slate-800 p-8 rounded-xl shadow" data-aos="fade-up">
+    <form (submit)="onSubmit()" #contactForm="ngForm" class="space-y-6">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="form.name"
+          required
+          class="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-slate-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="form.email"
+          required
+          class="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-slate-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          [(ngModel)]="form.message"
+          required
+          rows="4"
+          class="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-slate-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        class="w-full py-3 px-6 rounded-md bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors duration-300"
+      >
+        Send Message
+      </button>
+    </form>
+
+    <div *ngIf="submitted" class="mt-6 text-green-600 dark:text-green-400 font-medium text-center" data-aos="fade-in">
+      ✅ Message sent successfully!
+    </div>
+  </div>
+</section>
